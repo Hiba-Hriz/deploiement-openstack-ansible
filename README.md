@@ -9,7 +9,6 @@ Ce dépôt contient le rapport et les artefacts de mon stage, centré sur le dé
 
 ## 📂 Contenu
 - `rapport.pdf` : Rapport complet du stage
-- `presentation.pdf` : Présentation orale
 - `ansible/` : Configuration Ansible
 - `docs/` : Schémas réseau et documentation
 - `scripts/` : Scripts d’automatisation
