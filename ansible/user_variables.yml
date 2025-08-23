@@ -206,7 +206,6 @@ keystone_service_adminuri: http://192.168.207.189:5000
 # Use direct galera connection instead of VIP
 galera_address: 192.168.207.179
 galera_root_user: root
-
 # Database connection overrides
 keystone_galera_address: 192.168.207.179
 glance_galera_address: 192.168.207.179
@@ -214,38 +213,4 @@ nova_galera_address: 192.168.207.179
 neutron_galera_address: 192.168.207.179
 cinder_galera_address: 192.168.207.179
 heat_galera_address: 192.168.207.179
-utility_adress: 192.168.207.166
-cinder_api_bind_address: "192.168.207.169"
-cinder_service_internaluri_proto: http
-cinder_service_internaluri: http://192.168.207.169:8776
-# user_variables.yml
-cinder_api_container_ip: 192.168.207.169
-# Fix Glance endpoint for Cinder
-glance_service_internalurl: "http://192.168.207.169:9292"
-cinder_glance_api_servers: "http://192.168.207.140:9292"
-
-
-
-# Cinder API specific overrides
-cinder_bind_address: "192.168.207.169"
-
-# Override Cinder service endpoints in Keystone
-cinder_service_internalurl: "http://192.168.207.169:8776/v3/%(tenant_id)s"
-cinder_service_adminurl: "http://192.168.207.169:8776/v3/%(tenant_id)s"
-cinder_service_publicurl: "http://192.168.207.169:8776/v3/%(tenant_id)s"
-
-# Override internal service discovery URLs
-cinder_service_internaluri_proto: http
-cinder_service_internaluri: "http://192.168.207.169:8776"
-
-# Override HAProxy backend if used
-cinder_api_bind_address: "192.168.207.169"
-# Force l'adresse du container Cinder API
-cinder_api_container_bind_address: "192.168.207.169"
-cinder_management_address: "192.168.207.169"
-
-# Override des variables d'inventaire
-container_networks:
-  management_address:
-    address: "192.168.207.169"
 enable_haproxy: true
