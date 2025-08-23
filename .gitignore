@@ -1,9 +1,1 @@
-# Fichiers sensibles
-/etc/openstack_deploy/user_secrets.yml
-*.pem
-*.key
 
-# Fichiers temporaires
-*.log
-*.tmp
-.DS_Store
