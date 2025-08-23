@@ -1,7 +1,6 @@
 # Déploiement OpenStack avec Ansible
 
-Ce dépôt contient le rapport et les artefacts de mon stage, centré sur le déploiement d'une infrastructure cloud OpenStack à l'aide d'**OpenStack-Ansible**.
-
+Ce projet documente le déploiement d'OpenStack utilisant OpenStack-Ansible dans un environnement de conteneurs LXC.
 ## 🎯 Objectifs
 - Automatiser le déploiement d’OpenStack
 - Garantir reproductibilité, fiabilité et simplicité
@@ -9,12 +8,8 @@ Ce dépôt contient le rapport et les artefacts de mon stage, centré sur le dé
 
 ## 📂 Contenu
 - `rapport.pdf` : Rapport complet du stage
-- `ansible/` : Configuration Ansible
-- `docs/` : Schémas réseau et documentation
-- `scripts/` : Scripts d’automatisation
-
-## 🧩 Architecture
-![Architecture OpenStack](docs/architecture.png)
+- `ansible/` : Fichiers de configuration Ansible (openstack_user_config.yml, user_variables.yml)
+- `screenshots/` : Captures d'écran illustrant le déploiement (interface Horizon, état des conteneurs, résultats des tests)
 
 ## 🔧 Technologies utilisées
 - OpenStack (Antelope)
