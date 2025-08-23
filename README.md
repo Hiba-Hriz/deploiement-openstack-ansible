@@ -19,4 +19,4 @@ Ce projet documente le déploiement d'OpenStack utilisant OpenStack-Ansible dans
 
 ## 📚 Ressources
 - [Documentation OpenStack-Ansible](https://docs.openstack.org/openstack-ansible/latest/)
-- [Guide de déploiement OpenStack-Ansible (version 2025.1)](https://docs.openstack.org/project-deploy-guide/openstack-ansible/2025.1/overview.html)
+- [Guide de déploiement OpenStack-Ansible (version 2025.1)]([https://docs.openstack.org/project-deploy-guide/openstack-ansible/2025.1/overview.html](https://docs.openstack.org/project-deploy-guide/openstack-ansible/2025.1/overview.html)
