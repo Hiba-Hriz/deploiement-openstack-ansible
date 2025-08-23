@@ -857,7 +857,7 @@
 # ``keepalived_internal_ping_address`` variables in the ``user_variables.yml``
 # file.
 cidr_networks:
-  management: 192.168.207.0/24
+  management: 192.168.207.0/24   
   storage: 192.168.209.0/24
   tunnel: 192.168.210.0/24
 
@@ -868,9 +868,8 @@ used_ips:
   - "192.168.210.1,192.168.210.10"     # Réservé pour tunnel
 
 global_overrides:
-  # Depuis que vous avez désactivé HAProxy, pointez directement vers les services
-  internal_lb_vip_address: 192.168.207.60 # IP cohérente avec votre réseau
-  external_lb_vip_address: 192.168.207.189 # Même IP pour simplicité
+  internal_lb_vip_address: 192.168.207.60 
+  external_lb_vip_address: 192.168.207.189 
   management_bridge: "br-mgmt"
   provider_networks:
     - network:
@@ -902,17 +901,7 @@ global_overrides:
         net_name: "vxlan"
         group_binds:
           - neutron_openvswitch_agent
-# In your openstack_user_config.yml, modify infra_hosts:
-infra_hosts:
-  controller:
-    ip: 192.168.207.11
-    container_vars:
-      haproxy_enabled: true
 
-# And add this to enable HAProxy on infra hosts:
-haproxy_hosts:
-  controller:
-    ip: 192.168.207.11
 # Infrastructure partagée
 shared-infra_hosts:
   controller:
@@ -945,7 +934,7 @@ compute_hosts:
 
 # Infrastructure de stockage
 storage-infra_hosts:
-  controller:  # Changé de 'storage' vers 'controller' pour cohérence
+  controller:
     ip: 192.168.207.11
 
 # Hôtes de stockage
@@ -962,12 +951,3 @@ storage_hosts:
           volume_group: cinder-volumes
           iscsi_ip_address: "{{ cinder_storage_address }}"
       limit_container_types: cinder_volume
-infra_hosts:
-  controller:
-    ip: 192.168.207.11
-haproxy_hosts:
-  controller:
-    ip: 192.168.207.11
-cinder-api_hosts:
-  controller:
-    ip: 192.168.207.11
