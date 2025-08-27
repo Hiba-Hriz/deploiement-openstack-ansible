@@ -7,9 +7,8 @@ Ce projet documente le déploiement d'OpenStack utilisant OpenStack-Ansible dans
 - Mettre en œuvre une architecture modulaire avec conteneurs LXC
 
 ## 📂 Contenu
-- `rapport.pdf` : Rapport complet du stage
 - `ansible/` : Fichiers de configuration Ansible (openstack_user_config.yml, user_variables.yml)
-- `screenshots/` : Captures d'écran illustrant le déploiement (interface Horizon, état des conteneurs, résultats des tests)
+
 
 ## 🔧 Technologies utilisées
 - OpenStack (Antelope)
